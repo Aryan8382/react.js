@@ -1,39 +1,37 @@
-import react, { useState } from "react";
-import './App.css';
+import React from "react";
+import "./App.css";
 
-import Card from './Components/Card';
-import Table from './Components/Table';
-import FetchApi from './Components/FetchApi';
+import Card from "./Components/Card";
+import Table from "./Components/Table";
+import FetchApi from "./Components/FetchApi";
 import Timer from "./Components/Timer";
-import Todo from "./Components/Todo";
-import UeTodo from "./Components/UeTodo";
-import TimeSS from "./Components/TimerSS";
-import Form from "./Components/Form";
-import Homepage from "./Components/Homepage";
-import Localstorage from "./Components/Localstorage";
+import Nav from "./Components/Nav";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Product from "./Components/Product";
+import Electronic from "./Components/Electronic";
+// import Jewellery from "./Components/Jewellery";
+// import Menscloth from "./Components/Menscloth";
 
 function App() {
-  // const [state, setState] = useState(false);
-
   return (
-    <div className="App">
+      <div className="App">
+        <Nav />
 
-      {/* {state ? <Card /> : <Table />}
-
-      <button onClick={() => setState(true)}>Show Card</button>
-      <button onClick={() => setState(false)}>Show Table</button> */}
-
-
-      {/* <FetchApi /> */}
-      {/* <Timer /> */}
-      {/* <Todo /> */}
-      {/* <UeTodo /> */}
-      {/* <TimeSS />   */}
-      {/* <Form /> */}
-      {/* <Homepage /> */}
-      <Localstorage />
-    </div>
+        <Routes>
+          <Route path="/card" element={<Card />} />
+          <Route path="/table" element={<Table />} />
+          <Route path="/api" element={<FetchApi />} />
+          <Route path="/timer" element={<Timer />} />
+          <Route path="/Product" element={<Product />} > 
+          <Route path="electronic" element={<Electronic />} />
+          {/* <Route path="jewellery" element={<Jewellery />} /> */}
+          {/* <Route path="menscloth" element={<Menscloth />} /> */}
+          
+          </Route>
+        </Routes>
+      </div>
   );
 }
 

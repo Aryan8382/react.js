@@ -6,7 +6,7 @@ import Table from "./Components/Table";
 import FetchApi from "./Components/FetchApi";
 import Timer from "./Components/Timer";
 import Nav from "./Components/Nav";
-import CommentReview from "./Components/CommentReview";
+import SimpleTodo, { Form } from "./Components/Form";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -17,24 +17,26 @@ import Menscloth from "./Components/Menscloth";
 
 function App() {
   return (
-      <div className="App">
-        {/* <CommentReview/> */}
-        <Nav />
-        {/* <FetchApi /> */}
+    <div className="App">
+      <SimpleTodo />
+      <Form />
+      {/* <CommentReview/> */}
+      {/* <FetchApi /> */}
+      <Nav />
 
-        <Routes>
-          <Route path="/card" element={<Card />} />
-          <Route path="/table" element={<Table />} />
-          <Route path="/api" element={<FetchApi />} />
-          <Route path="/timer" element={<Timer />} />
-          <Route path="/Product" element={<Product />} > 
+      <Routes>
+        <Route path="/card" element={<Card />} />
+        <Route path="/table" element={<Table />} />
+        <Route path="/api" element={<FetchApi />} />
+        <Route path="/timer" element={<Timer />} />
+        <Route path="/Product" element={<Product />} >
           <Route path="electronic" element={<Electronic />} />
           <Route path="jewellery" element={<Jewellery />} />
           <Route path="menscloth" element={<Menscloth />} />
-          
-          </Route>
-        </Routes>
-      </div>
+
+        </Route>
+      </Routes>
+    </div>
   );
 }
 

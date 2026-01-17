@@ -15,7 +15,7 @@ export default function LocalStroage() {
     useEffect(() => {
         localStorage.setItem("data", JSON.stringify(data))
     }, [data])
-
+ 
     function SubmitForm(e) {
         e.preventDefault()
         setData([...data, state])

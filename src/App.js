@@ -14,28 +14,35 @@ import Product from "./Components/Product";
 import Electronic from "./Components/Electronic";
 import Jewellery from "./Components/Jewellery";
 import Menscloth from "./Components/Menscloth";
+import Homepage from "./Components/Homepage";
+import ProductDetails from "./Components/ProductDetails";
+import ProductData from "./Components/ProductData";
 
 function App() {
   return (
     <div className="App">
-      <SimpleTodo />
-      <Form />
+      {/* <SimpleTodo /> */}
+      {/* <Form /> */}
       {/* <CommentReview/> */}
       {/* <FetchApi /> */}
       <Nav />
+      {/* <Homepage /> */}
+      {/* <ProductData /> */}
 
-      <Routes>
-        <Route path="/card" element={<Card />} />
-        <Route path="/table" element={<Table />} />
-        <Route path="/api" element={<FetchApi />} />
-        <Route path="/timer" element={<Timer />} />
-        <Route path="/Product" element={<Product />} >
-          <Route path="electronic" element={<Electronic />} />
-          <Route path="jewellery" element={<Jewellery />} />
-          <Route path="menscloth" element={<Menscloth />} />
+        <Routes>
+          <Route path="/card" element={<Card />} />
+          <Route path="/table" element={<Table />} />
+          <Route path="/api" element={<FetchApi />} />
+          <Route path="/timer" element={<Timer />} />
 
-        </Route>
-      </Routes>
+          <Route path="/product" element={<Product />}>
+            <Route path="electronic" element={<Electronic />} />
+            <Route path="jewellery" element={<Jewellery />} />
+            <Route path="menscloth" element={<Menscloth />} />
+          </Route>
+
+          <Route path="/ProductDetails/:id" element={<ProductDetails />} />
+        </Routes>
     </div>
   );
 }

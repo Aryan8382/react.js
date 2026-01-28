@@ -17,6 +17,9 @@ import Menscloth from "./Components/Menscloth";
 import Homepage from "./Components/Homepage";
 import ProductDetails from "./Components/ProductDetails";
 import ProductData from "./Components/ProductData";
+import Props from "./Components/Props";
+import Input from "./Components/redux/Input";
+import Display from "./Components/redux/Display";
 
 function App() {
   return (
@@ -25,9 +28,13 @@ function App() {
       {/* <Form /> */}
       {/* <CommentReview/> */}
       {/* <FetchApi /> */}
-      <Nav />
+      {/* <Nav /> */}
       {/* <Homepage /> */}
-      {/* <ProductData /> */}
+      {/* <Props /> */}
+      <ProductData />
+
+      <Input />
+      <Display />
 
         <Routes>
           <Route path="/card" element={<Card />} />

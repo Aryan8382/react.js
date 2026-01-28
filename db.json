@@ -1,12 +1,19 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "name": "aryan"
-        },
-        {
-            "id": 2,
-            "name": "aryan shah"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "aryan",
+      "email": "shaharyan8203@gmail.com"
+    },
+    {
+      "id": "2",
+      "name": "aryan shah",
+      "email": "shaharyan8203@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "z",
+      "email": "z@gmail.com"
+    }
+  ]
 }

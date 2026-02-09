@@ -20,6 +20,8 @@ import ProductData from "./Components/ProductData";
 import Props from "./Components/Props";
 import Input from "./Components/redux/Input";
 import Display from "./Components/redux/Display";
+import Database from "./Components/Database";
+import FirebaseDb from "./Components/FirebaseDb"
 
 function App() {
   return (
@@ -31,25 +33,27 @@ function App() {
       {/* <Nav /> */}
       {/* <Homepage /> */}
       {/* <Props /> */}
-      <ProductData />
+      {/* <ProductData /> */}
 
-      <Input />
-      <Display />
+      {/* <Input /> */}
+      {/* <Display /> */}
+      {/* <Database /> */}
+      <FirebaseDb />
 
-        <Routes>
-          <Route path="/card" element={<Card />} />
-          <Route path="/table" element={<Table />} />
-          <Route path="/api" element={<FetchApi />} />
-          <Route path="/timer" element={<Timer />} />
+      <Routes>
+        <Route path="/card" element={<Card />} />
+        <Route path="/table" element={<Table />} />
+        <Route path="/api" element={<FetchApi />} />
+        <Route path="/timer" element={<Timer />} />
 
-          <Route path="/product" element={<Product />}>
-            <Route path="electronic" element={<Electronic />} />
-            <Route path="jewellery" element={<Jewellery />} />
-            <Route path="menscloth" element={<Menscloth />} />
-          </Route>
+        <Route path="/product" element={<Product />}>
+          <Route path="electronic" element={<Electronic />} />
+          <Route path="jewellery" element={<Jewellery />} />
+          <Route path="menscloth" element={<Menscloth />} />
+        </Route>
 
-          <Route path="/ProductDetails/:id" element={<ProductDetails />} />
-        </Routes>
+        <Route path="/ProductDetails/:id" element={<ProductDetails />} />
+      </Routes>
     </div>
   );
 }

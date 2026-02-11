@@ -10,7 +10,7 @@ export default function Database() {
     function senddata() {
         set(ref(database, 'user/Aryan'), {
             user: "aryan",
-            email: "makwanakrunal99109@gmail.com"
+            email: "aryan@gmail.com"
 
         })
             .then(() => {

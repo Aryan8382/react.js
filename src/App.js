@@ -22,6 +22,7 @@ import Input from "./Components/redux/Input";
 import Display from "./Components/redux/Display";
 import Database from "./Components/Database";
 import FirebaseDb from "./Components/FirebaseDb"
+import AddUser from "./Components/AddUser";
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
       {/* <Input /> */}
       {/* <Display /> */}
       {/* <Database /> */}
-      <FirebaseDb />
+      {/* <FirebaseDb /> */}
+      <AddUser />
 
       <Routes>
         <Route path="/card" element={<Card />} />

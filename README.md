@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+Product Management App Project Outline
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+﻿Instruction/Text linked with this question​1. Project Setup
 
-### `npm start`
+- Set up a new React project using Create React App.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Install required dependencies: `react-router-dom`, `redux`, `react-redux`, `redux-thunk`, ` Bootsrap`, `json-server`, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+​2. Component Structure
 
-### `npm run build`
+- Create the necessary components:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ProductList
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- ProductForm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ProductItem
 
-### `npm run eject`
+- PrivateRoute
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Navbar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Implement the basic component structure for the product management app.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+​3. Redux Setup (5 points)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Set up the Redux store with actions, reducers, and thunks.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Define actions for fetching, adding, updating, and deleting products.
 
-### Code Splitting
+- Implement thunks for asynchronous operations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+​4. JSON Server Setup (5 points)
 
-### Making a Progressive Web App
+- Set up a JSON Server to act as a backend for storing product data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Create a `db.json` file to store initial product data.
 
-### Advanced Configuration
+- Define routes for CRUD operations (e.g., `/products`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. Fetching and Displaying Products (5 points)
 
-### `npm run build` fails to minify
+- Implement the `fetchProducts` function in the ProductList component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Display products dynamically using the ProductItem component.
+
+- Connect the ProductList component to the Redux store to fetch product data from the server.
+
+
+
+6. Adding Products (5 points)
+
+- Implement the `addProduct` function in the ProductForm component.
+
+- Validate that product details (title, price, image, category) are provided before adding a product.
+
+- Dispatch a Redux action and thunk to add the product to the server and store.
+
+
+
+7. Updating Products (5 points)
+
+- Develop the `updateProduct` function in the ProductItem component to allow users to edit existing products.
+
+- Identify a unique identifier for each product to ensure accurate updating.
+
+- Dispatch a Redux action and thunk to update the product on the server and in the store.
+
+
+
+​8. Deleting Products (5 points)
+
+- Implement the `deleteProduct` function in the ProductItem component to allow users to remove products.
+
+- Dispatch a Redux action and thunk to delete the product from the server and store.
+
+
+
+​9. Sorting, Searching, and Filtering (10 points)
+
+- Implement sorting feature by price (low to high, high to low) in the ProductList component.
+
+- Add searching feature by product title in the ProductList component.
+
+- Implement filtering feature by category in the ProductList component.
+
+
+
+​10. User Authentication (5 points)
+
+- Implement a simple user authentication mechanism.
+
+- Restrict access to product-related operations based on user authentication status.
+
+
+
+​11. Navbar
+
+- Create a Navbar component to provide navigation within the application.
+
+- Include links to the product list, product form, and a sign-out option (if applicable).
+
+- Ensure the Navbar is responsive and visually appealing.
+
+
+
+​12. Bootstrap Styling (5 points)
+
+- Utilize Bootstrap I components for a modern and clean UI.
+
+- Apply styling and theming to enhance the overall look and feel of the application.

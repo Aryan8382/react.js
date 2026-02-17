@@ -23,6 +23,7 @@ import Display from "./Components/redux/Display";
 import Database from "./Components/Database";
 import FirebaseDb from "./Components/FirebaseDb"
 import AddUser from "./Components/AddUser";
+import FirebaseAuth from "./Components/FirebaseAuth";
 
 function App() {
   return (
@@ -40,7 +41,8 @@ function App() {
       {/* <Display /> */}
       {/* <Database /> */}
       {/* <FirebaseDb /> */}
-      <AddUser />
+      {/* <AddUser /> */}
+      <FirebaseAuth />
 
       <Routes>
         <Route path="/card" element={<Card />} />

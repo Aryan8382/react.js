@@ -6,7 +6,6 @@ import { delateAction, editAction } from './Action'
 
 export default function Display() {
     const data = useSelector((store) => { return store })
-    // console.log(data)
 
     const dispatch = useDispatch()
 

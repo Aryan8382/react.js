@@ -11,7 +11,7 @@ export default function AddFixedUser() {
         user: "aryan",
         email: "shah@gmail.com",
       });
-      alert("User Added");
+      
       getData();  
     } catch (error) {
       console.log("Error:", error);
